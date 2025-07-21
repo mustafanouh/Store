@@ -38,7 +38,7 @@ async function Product() {
         });
 
     
-        let localProduct = JSON.parse(localStorage.getItem('products'));
+        let localProduct = JSON.parse(localStorage.getItem('products')) || [];
 
         localProduct.forEach(localProduct => {
 
@@ -72,7 +72,9 @@ async function Product() {
 
 
     
-   
+    //    loader
+         document.getElementById("loader").style.display = "none";
+        document.getElementById("main").classList.remove("hidden");
 
 
 
@@ -80,7 +82,7 @@ async function Product() {
 
     } catch {
 
-        // console.log("Error");
+        console.log("Error");
     }
 
     setTimeout(() => {
@@ -141,9 +143,8 @@ async function Product() {
 
         loveButtons.forEach(button => {
             button.addEventListener("click", () => {
-                // العثور على العناصر داخل الكرت
                 const parentCard = button.closest("div.border");
-                if (!parentCard) return; // التحقق من وجود الكرت 
+                if (!parentCard) return; 
 
                 const title = parentCard.querySelector("h3")?.innerText;
                 const image = parentCard.querySelector("img")?.src;
@@ -330,11 +331,9 @@ if (bar) {
     })
 }
 
-setTimeout( loader ,1000)
-        function loader(){
-         document.getElementById("loader").style.display = "none";
-        document.getElementById("main").classList.remove("hidden");
-     }
+
+   
+
 
 
 
