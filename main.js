@@ -75,9 +75,7 @@ async function Product() {
    
 
 
-// loader 
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("main").classList.remove("hidden");
+
  
 
     } catch {
@@ -332,7 +330,11 @@ if (bar) {
     })
 }
 
-
+setTimeout( loader ,1000)
+        function loader(){
+         document.getElementById("loader").style.display = "none";
+        document.getElementById("main").classList.remove("hidden");
+     }
 
 
 
