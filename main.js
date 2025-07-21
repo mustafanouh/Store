@@ -119,9 +119,7 @@ async function Product() {
             button.addEventListener("click", () => {
 
                 const parentCard = button.closest("div.border");
-                const title = parentCard.querySelector("h3").innerText;
                 const image = parentCard.querySelector("img").src;
-                const price = parentCard.querySelector(".text-2xl").innerText;
                 Swal.fire({
                     title: "Do you want to add to cart ?",
                     imageUrl: image,
