@@ -17,29 +17,31 @@
 
 <body>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    </style>
 
-<style>
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
-</style>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
 
 
 
- 
+
 
 
     <!-- start header -->
-      <header class=" container mx-auto mt-10 borde   ">
+    <header class=" container mx-auto mt-10 borde   ">
         <nav class="flex justify-around items-center  max-sm:justify-between max-sm:mx-9  ">
-            <img class=" max-sm:w-24 max-sm:h-24  sm:w-24 sm:h-24  md:w-32 md:h-32  lg:w-36  lg:h-36 " src="./img/icon.png" alt="icon">
+            <img class=" max-sm:w-24 max-sm:h-24  sm:w-24 sm:h-24  md:w-32 md:h-32  lg:w-36  lg:h-36 "
+                src="./img/icon.png" alt="icon">
 
             <div class="flex flex-col justify-around   max-sm:hidden ">
                 <ul class="flex justify-around sm:justify-start mb-5 ">
-                    <li class="cursor-pointer m-2  text-xl  sm:text-lg  text-blue-500 font-bold "> <a href="index.html"> Home</a></li>
+                    <li class="cursor-pointer m-2  text-xl  sm:text-lg  text-blue-500 font-bold "> <a href="index.html">
+                            Home</a></li>
                     <li class="cursor-pointer m-2 text-xl   sm:text-lg  hover:text-blue-500 font-bold ">Contact</li>
                     <li class="cursor-pointer m-2 text-xl     sm:text-lg hover:text-blue-500 font-bold ">About Us</li>
                 </ul>
@@ -54,94 +56,105 @@
                         <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
                             <i class="fas fa-search"></i>
                         </span>
-                        <form  onsubmit="goToSearch(event)" >
-                        <input
-                         type="text"
-                         placeholder=" Search ... "
-                         id="searchInput"  
-                         class="w-lg sm:w-60  md:w-70 pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500  max-md:w-sm" 
-                            
-                            />
-                            </form>
+                        <form onsubmit="goToSearch(event)">
+                            <input type="text" placeholder=" Search ... " id="searchInput"
+                                class="w-lg sm:w-60  md:w-70 pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500  max-md:w-sm" />
+                        </form>
                     </div>
                 </div>
 
             </div>
             <div class="flex flex-col justify-around  max-sm:hidden  ">
                 <div class="text-center border border-blue-500  cursor-pointer  text-blue-500 rounded-full">
-                  <i class="fa-regular fa-moon   text-3xl"></i>
+                    <i class="fa-regular fa-moon   text-3xl"></i>
                 </div>
                 <div class="flex justify-around ">
-                 <a href="login.html">  <i class="fa-regular fa-user text-xl m-2  bg-gray-100 border  text-blue-500 border-blue-500  rounded-full p-1.5"></i> </a> 
-                    <a href="favorait.html"> <i  class="favoritesList fa-regular m-2 fa-heart text-xl  bg-gray-100 border text-blue-500  border-blue-500  rounded-full  p-1.5 not-first: "></i> </a> 
-                  <a href=""> <i class="fa-solid fa-cart-shopping text-xl m-2 bg-gray-100 border text-blue-500 border-blue-500  rounded-full  p-1.5 "></i></a> 
+                    <a href="login.html"> <i
+                            class="fa-regular fa-user text-xl m-2  bg-gray-100 border  text-blue-500 border-blue-500  rounded-full p-1.5"></i>
+                    </a>
+                    <a href="favorait.html"> <i
+                            class="favoritesList fa-regular m-2 fa-heart text-xl  bg-gray-100 border text-blue-500  border-blue-500  rounded-full  p-1.5 not-first: "></i>
+                    </a>
+                    <a href=""> <i
+                            class="fa-solid fa-cart-shopping text-xl m-2 bg-gray-100 border text-blue-500 border-blue-500  rounded-full  p-1.5 "></i></a>
                 </div>
                 <div class="  ">
                     <i class="fa-solid fa-phone text-blue-500 "></i>
                     +963985690091
                 </div>
             </div>
-            <span id="bar" class=" text-3xl font-bold  cursor-pointer sm:hidden" > 
-               <i class="fa-solid fa-bars"></i>
+            <span id="bar" class=" text-3xl font-bold  cursor-pointer sm:hidden">
+                <i class="fa-solid fa-bars"></i>
             </span>
-        
+
 
 
         </nav>
     </header>
- 
-    <div id="menue" class="bg-neutral-100 flex flex-col  w-3/4  border rounded shadow absolute right-2.5 top-28 hidden z-50  " >
-                 <ul class="flex justify-around  flex-col">
-                    <li class="cursor-pointer mt-5 ml-5  text-xl  sm:text-lg  text-blue-500 font-bold ">Home</li>
-                    <li class="cursor-pointer mt-5 ml-5  text-xl   sm:text-lg  hover:text-blue-500 font-bold ">Contact</li>
-                    <li class="cursor-pointer mt-5 ml-5 mb-5 text-xl     sm:text-lg hover:text-blue-500 font-bold ">About Us</li>
-                </ul>
-                <div class=" flex p-2.5 ">
 
-               
-                    <div class="relative w-64  max-md:w-sm ">
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
-                            <i class="fas fa-search"></i>
-                        </span>
-                        <input type="text" placeholder=" Search ... "
-                            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500  max-md:w-sm" />
-                    </div>
-                </div>
-                <div class="flex flex-col justify-around   ">
-                
-                <div class="flex justify-around p-2.5 ">
-                 <a href="login.html" >  <i class="fa-regular  fa-user text-xl m-2  bg-gray-100 border  text-blue-500 border-blue-500  rounded-full p-2 "></i> </a> 
-                <a href="favorait.html"> <i  class="favoritesList fa-regular m-2 fa-heart text-xl  bg-gray-100 border text-blue-500  border-blue-500  rounded-full  p-2  "></i> </a> 
-                 
-                <a href=""> <i class="fa-solid fa-cart-shopping  text-xl m-2 bg-gray-100 border text-blue-500 border-blue-500  rounded-full  p-2 "></i></a> 
-                  <a href=""> <i class=" fa-regular fa-moon  text-xl m-2 bg-gray-100 border text-blue-500 border-blue-500  rounded-full  p-2"></i></a>
-                </div>
+    <div id="menue"
+        class="bg-neutral-100 flex flex-col  w-3/4  border rounded shadow absolute right-2.5 top-28 hidden z-50  ">
+        <ul class="flex justify-around  flex-col">
+            <li class="cursor-pointer mt-5 ml-5  text-xl  sm:text-lg  text-blue-500 font-bold ">Home</li>
+            <li class="cursor-pointer mt-5 ml-5  text-xl   sm:text-lg  hover:text-blue-500 font-bold ">Contact</li>
+            <li class="cursor-pointer mt-5 ml-5 mb-5 text-xl     sm:text-lg hover:text-blue-500 font-bold ">About Us
+            </li>
+        </ul>
+        <div class=" flex p-2.5 ">
 
-                <div class="text-center p-2.5  pb-8 ">
-                    <i class="fa-solid fa-phone text-blue-500 "></i>
-                    +963985690091
-                </div>
+
+            <div class="relative w-64  max-md:w-sm ">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" placeholder=" Search ... "
+                    class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500  focus:w-full max-md:w-sm" />
             </div>
+        </div>
+        <div class="flex flex-col justify-around   ">
+
+            <div class="flex justify-around p-2.5 ">
+                <a href="login.html"> <i
+                        class="fa-regular  fa-user text-xl m-2  bg-gray-100 border  text-blue-500 border-blue-500  rounded-full p-2 "></i>
+                </a>
+                <a href="favorait.html"> <i
+                        class="favoritesList fa-regular m-2 fa-heart text-xl  bg-gray-100 border text-blue-500  border-blue-500  rounded-full  p-2  "></i>
+                </a>
+
+                <a href=""> <i
+                        class="fa-solid fa-cart-shopping  text-xl m-2 bg-gray-100 border text-blue-500 border-blue-500  rounded-full  p-2 "></i></a>
+                <a href=""> <i
+                        class=" fa-regular fa-moon  text-xl m-2 bg-gray-100 border text-blue-500 border-blue-500  rounded-full  p-2"></i></a>
+            </div>
+
+            <div class="text-center p-2.5  pb-8 ">
+                <i class="fa-solid fa-phone text-blue-500 "></i>
+                +963985690091
+            </div>
+        </div>
 
     </div>
 
 
     <!-- end header -->
 
-     <!-- start  loading  -->
-      <div id="loader" class="fixed inset-0 bg-white flex items-center justify-center flex-col z-50">
+    <!-- start  loading  -->
+    <div id="loader" class="fixed inset-0 bg-white flex items-center justify-center flex-col z-50">
         <img src="./img/icon.png" alt="loader" class="max-sm:w-48 max-sm:h-48 w-60 h-60  ">
-        <p class="pt-20 text-center text-xl font-bold text-black "> From <span class=" text-blue-600"> Mustafa Nouh</span></p>
-       </div>
+        <p class="pt-20 text-center text-xl font-bold text-black "> From <span class=" text-blue-600"> Mustafa
+                Nouh</span></p>
+    </div>
     <!-- end loading  -->
 
-  
+
     <!-- main section -->
     <main class="main mx-auto bg-gray-100  ">
         <div>
             <div class="flex items-center content-center justify-between pl-2 pr-8  ml-5 pt-12 pb-5 mt-5">
-                <h3 class="text-3xl ">Product</h3> 
-               <a href="add-product.html"><button class=" border border-black  sm:text-sm p-2 rounded-lg bg-blue-500 text-white  cursor-pointer "> Add Product <i class="fa-solid fa-plus" ></i></button> </a> 
+                <h3 class="text-3xl ">Product</h3>
+                <a href="add-product.html"><button
+                        class=" border border-black  sm:text-sm p-2 rounded-lg bg-blue-500 text-white  cursor-pointer ">
+                        Add Product <i class="fa-solid fa-plus"></i></button> </a>
             </div>
             <div class=" parant-card   grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
 
@@ -171,13 +184,13 @@
                         About
                     </a>
                 </div>
-               
+
                 <div class="px-5 py-2">
                     <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                         Contact Us
                     </a>
                 </div>
-                
+
                 <div class="px-5 py-2">
                     <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                         Our Product
@@ -217,10 +230,10 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </a>
-               
+
             </div>
             <p class="mt-8 text-base leading-6 text-center text-gray-400">
-                © 2025 created by <span class="font-bold text-blue-600"> Mustafa Nouh </span> 
+                © 2025 created by <span class="font-bold text-blue-600"> Mustafa Nouh </span>
             </p>
         </div>
     </footer>

@@ -8,7 +8,7 @@ async function Product() {
         let response = await fetch("https://fakestoreapi.com/products");
         let data = await response.json();
 
-
+    
 
         data.forEach(({ image, title, price }) => {
             Parant_card.innerHTML += `
@@ -37,16 +37,16 @@ async function Product() {
 
         });
 
+    
         let localProduct = JSON.parse(localStorage.getItem('products'));
 
         localProduct.forEach(localProduct => {
 
             Parant_card.innerHTML += `
- <div class="  bg-white border  border-gray-50  rounded shadow  p-4 text-center flex flex-col h-full ">
-        <img src="${localProduct.image}" class="w-full h-40 object-contain mb-4" alt="img">
-        <h3 class="text-base font-semibold mb-4 line-clamp-2">${localProduct.title}</h3>
-     
-        <div class="mt-auto bg-white">
+             <div class="  bg-white border  border-gray-50  rounded shadow  p-4 text-center flex flex-col h-full ">
+          <img src="${localProduct.image}" class="w-full h-40 object-contain mb-4" alt="img">
+          <h3 class="text-base font-semibold mb-4 line-clamp-2">${localProduct.title}</h3>
+           <div class="mt-auto bg-white">
             <div class="flex justify-between items-center border-t-2 border-blue-500 pt-4">
                 <div class="text-black font-bold text-2xl">${localProduct.price}$</div>
                 <div class="flex gap-2">
@@ -71,14 +71,14 @@ async function Product() {
 
 
 
-        // loader 
+    
+   
+
+
+// loader 
         document.getElementById("loader").style.display = "none";
         document.getElementById("main").classList.remove("hidden");
-
-
-
-
-
+ 
 
     } catch {
 
@@ -153,25 +153,21 @@ async function Product() {
                 const image = parentCard.querySelector("img")?.src;
                 const price = parentCard.querySelector(".text-2xl")?.innerText;
 
-                // التحقق من وجود العناصر
                 if (!title || !image || !price) {
                     Swal.fire({
-                        title: "خطأ!",
-                        text: "لم يتم العثور على بيانات المنتج.",
+                        title: "error!",
+                        text: " sory dont have any product    .",
                         icon: "error",
-                        confirmButtonText: "تم"
+                        confirmButtonText: "ok"
                     });
                     return;
                 }
 
-                // استرجاع قائمة المفضلة
                 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-                // التحقق مما إذا كان المنتج موجودًا
                 const isAlreadyFavorite = favorites.some(product => product.title === title);
 
                 if (!isAlreadyFavorite) {
-                    // إضافة المنتج إلى المفضلة
                     favorites.push({ title, image, price });
                     localStorage.setItem('favorites', JSON.stringify(favorites));
 
