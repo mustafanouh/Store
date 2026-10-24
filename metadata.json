@@ -1,0 +1,8 @@
+{
+  "name": "Product Store",
+  "description": "A modern, full-featured bilingual (Arabic/English) e-commerce store with product discovery, quick view, cart drawer, promo coupons, checkout flow with Cash on Delivery, order tracking, and wishlist.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
